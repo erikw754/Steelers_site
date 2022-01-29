@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+    margin: 0px 0px 0px 0px; 
+    padding: 0px 0px 0px 0px; 
+    font-family: 'Kumbh Sans', sans-serif;
+    scroll-behavior: smooth;
+   
+    
+    
+    
+    
+    }
+    
+    
+    html { 
+      background: url(images/background-pics/background.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    padding: 0;
+  
+    
+      } 
+    
+    /*navbar*/
+    
+    .navbar {
+    background: black;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    top: 0;
+    z-index: 999;
+    position: sticky;
+    
+    }
+    
+    .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+    }
+    
+    #navbar__logo {
+    
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    }
+    
+    .navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    }
+    
+    .navbar__item {
+    height: 80px;
+    }
+    
+    .navbar__links {
+    color: #d09500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s ease;
+    
+    }
+    
+    
+    .navbar__links:hover {
+    color: #d09500;
+    transition: all 0.3s ease;
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+      
+  }
+  ul li {
+      display: inline-block;
+      position: relative;
+      line-height: 21px;
+      text-align: left;
+  }
+  ul li a {
+      display: block;
+      padding: 8px 25px;
+      color: rgb(221, 221, 221);
+      text-decoration: none;
+  }
+  ul li a:hover {
+      color: #d09500;
+      background: #939393;
+  }
+  ul li ul.dropdown {
+      min-width: 100%; /* Set width of the dropdown */
+      background: black;
+      display: none;
+      position: absolute;
+      z-index: 999;
+      left: 0;
+  }
+  ul li:hover ul.dropdown {
+      display: block; /* Display the dropdown */
+  }
+  ul li ul.dropdown li {
+      display: block;
+  }
+    
+    @media screen and (max-width: 960px) {
+    .navbar__container {
+      display: flex;
+      justify-content: space-between;
+      height: 80px;
+      z-index: 1;
+      width: 100%;
+      max-width: 1300px;
+      padding: 0;
+    }
+    
+    .navbar__menu {
+      display: grid;
+      grid-template-columns: auto;
+      margin: 0;
+      width: 100%;
+      position: absolute;
+      top: -1000px;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: -1;
+    }
+    
+    .navbar__menu.active {
+      background: #131313;
+      top: 100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 99;
+      height: 60vh;
+      font-size: 1.6rem;
+    }
+    
+    #navbar__logo {
+      padding-left: 25px;
+    }
+    
+    .navbar__toggle .bar {
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+      background: #d09500
+    }
+    
+    .navbar__item {
+      width: 100%;
+    }
+    
+    .navbar__links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+    }
+    
+    #mobile-menu {
+      position: absolute;
+      top: 20%;
+      right: 5%;
+      transform: translate(5%, 20%);
+    }
+    
+    .navbar__toggle .bar {
+      display: block;
+      cursor: pointer;
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+    }
+    
+  
+
+    /*GALLERY SECTION*/
+    
+    #container {
+        text-align:center;
+        margin: 50px;
+    }
+    h2 {
+        text-align: center;
+        font-size: 50px;
+        text-shadow:
+        -1px -1px 0 #ce9c1c,
+        1px -1px 0 #ce9c1c,
+        -1px 1px 0 #ce9c1c,
+        1px 1px 0 #ce9c1c,  
+        -2px 0 0 #ce9c1c,
+        2px 0 0 #ce9c1c,
+        0 2px 0 #ce9c1c,
+        0 -2px 0 #ce9c1c;
+       }
+    .wrap{
+        display:inline-block;
+        position:relative;
+        cursor:pointer;
+    }
+    .wrap p{
+        position:absolute;
+        opacity:0;
+        top:50%;
+        left:-8%;
+        padding:5px;
+        text-align:center;
+        width:113%;
+        font-size:20px;
+        line-height:20px;
+        margin-top: 50px;
+        z-index:3;
+        transition:1s;
+        font-family: fantasy;
+        color: rgb(92, 92, 92);
+        text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black,  
+        -1px 0 0 black,
+        1px 0 0 black,
+        0 1px 0 black,
+        0 -1px 0 black;
+    }
+    
+    .wrap img {
+        display:block;
+        width:300px;
+        height:200px;
+        margin:5px;
+        -webkit-transition:opacity 0.26s ease-out;
+        -moz-transition:opacity 0.26s ease-out;
+        -ms-transition:opacity 0.26s ease-out;
+        -o-transition:opacity 0.26s ease-out;
+        transition:opacity 0.26s ease-out;
+        transition:500ms;
+      
+    }
+  
+    #container:hover .wrap:hover img {
+        opacity:1;
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+        z-index:2;
+        position:relative;
+        transition:500ms;
+    }
+    .wrap:hover p {
+        opacity :1;
+    }
+    
+    
+    @media screen and (max-width:500px) {
+        #container img {
+            width:200px;
+            height:133px;
+        }
+    }
+    .footer {
+       
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+      }

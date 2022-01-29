@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+    margin: 0px 0px 0px 0px; 
+    padding: 0px 0px 0px 0px; 
+    font-family: 'Kumbh Sans', sans-serif;
+    scroll-behavior: smooth;
+   
+    
+    
+    
+    
+    }
+    
+    
+    html { 
+      background: url(images/background-pics/heinz_field.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      height: 100%;
+      opacity:70;
+      padding: 0;
+    
+      } 
+    
+    /*navbar*/
+    
+    .navbar {
+    background: black;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    top: 0;
+    z-index: 999;
+    position: sticky;
+    
+    }
+    
+    .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+    }
+    
+    #navbar__logo {
+    
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    }
+    
+    .navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    }
+    
+    .navbar__item {
+    height: 80px;
+    }
+    
+    .navbar__links {
+    color: #d09500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s ease;
+    
+    }
+    
+    
+    .navbar__links:hover {
+    color: #d09500;
+    transition: all 0.3s ease;
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+      
+  }
+  ul li {
+      display: inline-block;
+      position: relative;
+      line-height: 21px;
+      text-align: left;
+  }
+  ul li a {
+      display: block;
+      padding: 8px 25px;
+      color: rgb(221, 221, 221);
+      text-decoration: none;
+  }
+  ul li a:hover {
+      color: #d09500;
+      background: #939393;
+  }
+  ul li ul.dropdown {
+      min-width: 100%; /* Set width of the dropdown */
+      background: black;
+      display: none;
+      position: absolute;
+      z-index: 999;
+      left: 0;
+  }
+  ul li:hover ul.dropdown {
+      display: block; /* Display the dropdown */
+  }
+  ul li ul.dropdown li {
+      display: block;
+  }
+    
+    @media screen and (max-width: 960px) {
+    .navbar__container {
+      display: flex;
+      justify-content: space-between;
+      height: 80px;
+      z-index: 1;
+      width: 100%;
+      max-width: 1300px;
+      padding: 0;
+    }
+    
+    .navbar__menu {
+      display: grid;
+      grid-template-columns: auto;
+      margin: 0;
+      width: 100%;
+      position: absolute;
+      top: -1000px;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: -1;
+    }
+    
+    .navbar__menu.active {
+      background: #131313;
+      top: 100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 99;
+      height: 60vh;
+      font-size: 1.6rem;
+    }
+    
+    #navbar__logo {
+      padding-left: 25px;
+    }
+    
+    .navbar__toggle .bar {
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+      background: #d09500
+    }
+    
+    .navbar__item {
+      width: 100%;
+    }
+    
+    .navbar__links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+    }
+    
+    #mobile-menu {
+      position: absolute;
+      top: 20%;
+      right: 5%;
+      transform: translate(5%, 20%);
+    }
+    
+    .navbar__toggle .bar {
+      display: block;
+      cursor: pointer;
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+    }
+    
+    /* Home Section */
+   
+  
+      .field {
+      font-size: 14px;
+      color: #ababab;
+      text-transform: uppercase;
+      width: 115px;
+      display: flex;
+      vertical-align: middle;
+      }
+      .field-value {
+      font-size: 18px;
+      font-weight: 500;
+      color: #808080;
+      display: flex;
+      flex: 1;
+      vertical-align: middle;
+      }
+    
+
+      .taxonomy-info p {
+      clear: unset;
+      line-height: 24px;
+      margin-bottom: 10px;
+      display: flex;
+      }
+    
+      h1 {
+      font-size: 25px!important;
+      float: none;
+      }
+
+      .name-h1 {
+        font-size:30px;
+        font-weight:550;
+        color:#555555;
+        display:inline-block;
+        margin:0;
+        line-height:34px;
+        padding:20px 16px 20px 20px;
+        }
+        hr {
+        margin:0;
+        }
+        .taxonomy-img {
+        padding:20px 5px 20px 20px;
+        }
+        .about-team-player {
+        color: #555555;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 8px 16px;
+        letter-spacing: 0.3px;
+        }
+        .taxonomy-content .ql-align-justify {
+          text-align: justify;
+          list-style-type: none;
+          padding-left: 1.5em;
+          }
+          .taxonomy-content p {
+            padding: 0 5% 0; 
+            float: none;
+            clear:both;
+            font-size: 14px !important;
+            line-height: 1.5 !important;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            text-align: :left;
+            
+            }
+
+      /*footer*/
+    .footer {
+         
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: black;
+      color: white;
+      text-align: center;
+    }
